@@ -1,0 +1,17 @@
+{
+  "name": "website",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "jstransformer-scss": "^1.0.0",
+    "pug": "^3.0.2"
+  }
+}

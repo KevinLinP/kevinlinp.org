@@ -3,7 +3,7 @@ html(lang='en')
   head
     include /common-head.pug
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous" defer)
-    script(src="/jquery.parallax.min.js" defer)
+    script(src="https://cdn.jsdelivr.net/npm/jquery-parallax.js@1.5.0/parallax.min.js" integrity="sha256-cNb9ArVGKhXkedowZK9xRxCpr6qqck5JvCAsuMzJlPw=" crossorigin="anonymous" defer)
     style
       :scss
         h1, h2, h3, h4, h5, h6, h7 {
@@ -20,7 +20,7 @@ html(lang='en')
         }
 
   body
-    .parallax-window(data-parallax data-src="https://ddw2ppmkywo9u.cloudfront.net/sunset_cropped.jpg" data-bleed="120" data-speed="0.63")
+    .parallax-window(data-parallax="scroll" data-image-src="https://ddw2ppmkywo9u.cloudfront.net/sunset_cropped.jpg" data-bleed="120" data-speed="0.63")
 
     .text-center
       img(src='https://ddw2ppmkywo9u.cloudfront.net/profile_picture.jpg' class='circular-image white-border' height='150px' width='150px')
@@ -36,13 +36,18 @@ html(lang='en')
 
       .row
         article.lead.col-lg-8.offset-lg-2.col-xs-12(style='margin-top: 3rem; margin-bottom: 6rem')
-          include:markdown-it /homepage-text.md
-
-      //-
-        .row.justify-content-center.mb-5
-          .mr-3
-            a(href="http://instagram.com/wild0kl")
-              i(class="fa fa-instagram fa-3x")
-          div
-            a(href="https://twitter.com/kevinlinp")
-              i(class="fa fa-twitter fa-3x")
+          p Hi o/ I'm Kevin. I collect experiences.
+          p
+            | As such, I have many interests and hobbies. And I'm always looking to do something new and go further. I'd like to offer my help in any of my below topics; just email me at 
+            a(href="mailto:kevin.lin.p@gmail.com") kevin.lin.p@gmail.com
+            | .
+          ul
+            li Software development
+            li Cooking
+            li Barbecue
+            li LED art installations
+            li Sound systems
+            li PC building
+            li WiFi installation
+            li Residential LED lighting
+            li Portable/off-grid solar power
