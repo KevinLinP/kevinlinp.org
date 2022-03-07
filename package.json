@@ -1,0 +1,15 @@
+{
+  "name": "parcel-test",
+  "description": "",
+  "scripts": {
+    "start": "parcel src/*.pug",
+    "build": "parcel build src/*.pug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.3.2",
+    "parcel": "^2.3.2"
+  }
+}

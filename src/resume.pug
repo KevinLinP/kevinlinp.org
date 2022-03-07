@@ -1,14 +1,14 @@
 doctype html
 html(lang='en')
   head
-    include /common-head.pug
+    include _includes/common-head.pug
     script(defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous")
     //-link(rel="stylesheet" href="https://fontlibrary.org/face/cmu-bright" type="text/css")
     link(rel="stylesheet" href="https://kevin-lins-personal-website.s3-us-west-2.amazonaws.com/cmu-bright/Bright/cmun-bright.css" type="text/css")
     link(rel="stylesheet" href="https://kevin-lins-personal-website.s3-us-west-2.amazonaws.com/cmu-bright/Bright Semibold/cmun-bright-semibold.css" type="text/css")
 
     style
-      include:scss /resume/styles.scss
+      include:scss _includes/resume/styles.scss
 
   body.resume
     .d-print-none.mt-2.mb-3.mx-4.opaque-on-hover(style="font-size: 90%; opacity: 0.3;")
@@ -60,7 +60,7 @@ html(lang='en')
             span.ms-2 Agile, test-driven development, pair programming
 
       section
-        include /resume/experience.pug
+        include _includes/resume/experience.pug
 
       section
-        include /resume/education.pug
+        include _includes/resume/education.pug
