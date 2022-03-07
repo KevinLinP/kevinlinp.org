@@ -3,11 +3,11 @@ const Eleventy = require("@11ty/eleventy");
 
 // TODO: ditch Eleventy 😠
 (async function() {
-  if (!fs.existsSync('_site')) {
-    fs.mkdirSync('_site')
+  if (!fs.existsSync('../_site')) {
+    fs.mkdirSync('../_site')
   }
 
-  const elev = new Eleventy('src/');
+  const elev = new Eleventy('.', '../_site');
   const output = await elev.toJSON();
 
   output.forEach((page) => {
