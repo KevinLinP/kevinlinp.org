@@ -4,20 +4,19 @@ html(lang='en')
     include _includes/common-head.pug
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous" defer)
     script(src="https://cdn.jsdelivr.net/npm/jquery-parallax.js@1.5.0/parallax.min.js" integrity="sha256-cNb9ArVGKhXkedowZK9xRxCpr6qqck5JvCAsuMzJlPw=" crossorigin="anonymous" defer)
-    style
-      :scss
-        h1, h2, h3, h4, h5, h6, h7 {
-          font-weight: 300;
-        }
-        .circular-image {
-          border-radius: 50%;
-        }
-        .white-border {
-          border: 3px solid white
-        }
-        .parallax-window {
-          min-height: 50vh;
-        }
+    style.
+      h1, h2, h3, h4, h5, h6, h7 {
+        font-weight: 300;
+      }
+      .circular-image {
+        border-radius: 50%;
+      }
+      .white-border {
+        border: 3px solid white
+      }
+      .parallax-window {
+        min-height: 50vh;
+      }
 
   body
     .parallax-window(data-parallax="scroll" data-image-src="https://ddw2ppmkywo9u.cloudfront.net/sunset_cropped.jpg" data-bleed="120" data-speed="0.63")

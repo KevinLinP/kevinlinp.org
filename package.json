@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.3.2",
-    "parcel": "^2.3.2"
+    "@parcel/transformer-pug": "^2.13.3",
+    "jstransformer-clean-css": "^2.1.0",
+    "parcel": "^2.13.3"
   }
 }
