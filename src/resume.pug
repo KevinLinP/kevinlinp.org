@@ -27,8 +27,13 @@ html(lang='en')
         | printed from
         |
         a(href="https://kevinlinp.org/resume") kevinlinp.org/resume
+        |
+        | on
+        |
+        span#viewedAt
 
     .container
+      .d-flex
       .text-center
         h1 Kevin Lin
         a(href="mailto:kevin.lin.p@gmail.com") kevin.lin.p@gmail.com
@@ -61,3 +66,6 @@ html(lang='en')
 
       section
         include _includes/resume/education.pug
+
+    script.
+      document.getElementById('viewedAt').textContent = new Date().toLocaleDateString(undefined, {month: 'numeric', day: 'numeric', year: '2-digit'});
