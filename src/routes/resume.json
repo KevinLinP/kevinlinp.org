@@ -1,0 +1,210 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "basics": {
+    "name": "Kevin Lin",
+    "label": "Staff Software Engineer",
+    "email": "kevin.lin.p@gmail.com",
+    "url": "https://kevinlinp.org",
+    "summary": "Staff software engineer, backend-focused full-stack web, 10+ years of Ruby on Rails experience.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "kevinlinp",
+        "url": "https://github.com/kevinlinp"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Aurora Solar",
+      "location": "Remote",
+      "position": "Staff Software Engineer",
+      "url": "https://www.aurorasolar.com",
+      "startDate": "2023-12",
+      "endDate": "",
+      "highlights": [
+        "Part of a 7-person engineering team that built, launched, and supports a multi-million-dollar annual-recurring-revenue platform.",
+        "Traversed all layers of the stack which uses: Ruby on Rails, React, TypeScript, Apollo GraphQL, PostgreSQL, Sidekiq, Docker, Cypress.",
+        "Responsibilities included: planning and leading large features; evaluating, articulating, and balancing short-term vs long-term tradeoffs; seeding engineering discussions; data modeling; refactoring; performance optimization; code review; behavioral interviews.",
+        "First to adopt and help refine the latest engineering upgrades.",
+        "Core contributor to 2 winning teams in our twice-yearly internal hackathons."
+      ]
+    },
+    {
+      "name": "Aurora Solar",
+      "location": "Remote",
+      "position": "Senior Software Engineer",
+      "url": "https://www.aurorasolar.com",
+      "startDate": "2022-01",
+      "endDate": "2023-11",
+      "highlights": [
+        "Part of a 7-person engineering team that built, launched, and supports a multi-million-dollar annual-recurring-revenue platform.",
+        "Traversed all layers of the stack which uses: Ruby on Rails, React, TypeScript, Apollo GraphQL, PostgreSQL, Sidekiq, Docker, Cypress.",
+        "Responsibilities included: planning and leading large features; evaluating, articulating, and balancing short-term vs long-term tradeoffs; seeding engineering discussions; data modeling; refactoring; performance optimization; code review; behavioral interviews.",
+        "First to adopt and help refine the latest engineering upgrades.",
+        "Core contributor to 2 winning teams in our twice-yearly internal hackathons."
+      ]
+    },
+    {
+      "name": "Enovational",
+      "location": "Washington, DC",
+      "position": "Software Developer",
+      "url": "https://www.linkedin.com/company/enovational-corp/",
+      "startDate": "2019-10",
+      "endDate": "2021-12",
+      "highlights": [
+        "Full-stack developer on a Ruby on Rails/Vue.js form and low-code app builder.",
+        "Shipped dozens of features and fixed dozens of bugs.",
+        "Responsibilities included: data modeling, refactoring, feature testing, performance optimization, data migrations, event logging, code review, and interviewing."
+      ]
+    },
+    {
+      "name": "Hospitality Online",
+      "location": "Seattle, WA",
+      "position": "Software Developer",
+      "url": "https://www.hospitalityonline.com",
+      "startDate": "2018-02",
+      "endDate": "2019-03",
+      "highlights": [
+        "Full-stack developer on a 8-year-old consumer-facing Ruby on Rails project.",
+        "Shipped dozens of features and fixed dozens of bugs.",
+        "Responsibilities included: data model design, responsive designs, refactoring, feature testing, performance optimization, and SQL query inspection."
+      ]
+    },
+    {
+      "name": "Tanooki Labs",
+      "location": "Remote",
+      "position": "Software Developer, Contract",
+      "url": "https://tanookilabs.com/",
+      "startDate": "2016-09",
+      "endDate": "2017-07",
+      "highlights": [
+        "Full-stack developer on a consumer-facing Ruby on Rails project.",
+        "Independently implemented full features with direction from product managers and designers.",
+        "Responsibilities included: data model design, Elasticsearch integration, performance optimization, heavy client-side processing, responsive designs, continuous integration, refactoring, and Heroku deployment."
+      ]
+    },
+    {
+      "name": "Clinkle",
+      "location": "Remote",
+      "position": "Software Engineer, Contract",
+      "url": "https://www.linkedin.com/company/surprise-hr/about/",
+      "startDate": "2015-07",
+      "endDate": "2016-06",
+      "highlights": [
+        "Solo full-stack engineer on the Ruby on Rails Treats API server.",
+        "Took ownership of the entire codebase and attached operational concerns.",
+        "Developed and deployed intentionally non-deterministic business code.",
+        "Began feature testing in code, increasing code coverage from 0% to over 85%.",
+        "Independently implemented full features with direction from product managers and designers.",
+        "Responsibilities included: payment processing, Heroku hosting, exception logging, NewRelic monitoring, uptime improvement, performance optimization, SQL query inspection, event logging, refactoring, implementing and negotiating web designs with designers, responsive designs, task and project management, coordination with remote workers, feature testing, and continuous integration."
+      ]
+    },
+    {
+      "name": "Avvo",
+      "location": "Seattle, WA",
+      "position": "Software Engineer",
+      "url": "https://en.wikipedia.org/wiki/Avvo",
+      "startDate": "2012-03",
+      "endDate": "2015-04",
+      "highlights": [
+        "Worked on every layer of a complex 8-year-old Rails project comprised of multiple databases, Rails installations, and in-house libraries.",
+        "Implemented a revamp of the high-traffic legal guide pages through working with designers and product managers.",
+        "Was part of a small greenfield team that built Avvo's lead tracking solution: Ignite.",
+        "Shipped dozens of features and fixed hundreds of bugs throughout all of Avvo's codebase.",
+        "Optimized server response performance by implementing page fragment caching, optimizing SQL queries, and revising data models.",
+        "Helped divide a monolithic application into several smaller, focused concerns through the use of RESTful microservices.",
+        "Touched a large variety of topics including code reviews, analytics, server monitoring, cross-browser issues, browser-automation testing, HTML Microdata, and Rails framework updates."
+      ]
+    },
+    {
+      "name": "Rackspace",
+      "location": "Blacksburg, VA",
+      "position": "Software Developer Intern, Part-Time",
+      "url": "https://en.wikipedia.org/wiki/Rackspace",
+      "startDate": "2009-01",
+      "endDate": "2010-05",
+      "highlights": [
+        "Completed the MS Exchange functions of the Email and Apps REST API and helped the product launch.",
+        "Took ownership of the Email and Apps API documentation."
+      ]
+    },
+    {
+      "name": "Virginia Tech: College of Engineering",
+      "location": "Blacksburg, VA",
+      "position": "Undergraduate Teaching Assistant",
+      "url": "https://eng.vt.edu",
+      "startDate": "2008-01",
+      "endDate": "2008-05",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "Virginia Tech",
+      "url": "https://en.wikipedia.org/wiki/Virginia_Tech",
+      "area": "Computer Science",
+      "studyType": "B.S.",
+      "location": "Blacksburg, VA",
+      "courses": [
+        "Technical Writing",
+        "Intro to DBMS",
+        "Design of Information",
+        "Software Engineering"
+      ]
+    },
+    {
+      "institution": "Thomas Jefferson High School for Science and Technology",
+      "url": "https://en.wikipedia.org/wiki/Thomas_Jefferson_High_School_for_Science_and_Technology",
+      "location": "Alexandria, VA"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "Ruby",
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "keywords": [
+        "Ruby on Rails",
+        "React",
+        "Vue.js",
+        "Apollo GraphQL",
+        "MiniTest",
+        "Cypress"
+      ]
+    },
+    {
+      "name": "Tools",
+      "keywords": [
+        "Linux",
+        "PostgreSQL",
+        "Elasticsearch",
+        "Sidekiq",
+        "Git",
+        "Docker",
+        "Sentry",
+        "Datadog"
+      ]
+    },
+    {
+      "name": "Methodologies",
+      "keywords": [
+        "agile software development",
+        "test-driven development",
+        "pair programming"
+      ]
+    }
+  ],
+  "meta": {
+    "lastModified": "2024-03-26"
+  }
+}

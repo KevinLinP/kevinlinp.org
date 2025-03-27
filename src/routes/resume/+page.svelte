@@ -4,6 +4,7 @@
 	import Education from './Education.svelte';
 	// import Projects from './Projects.svelte';
 	import '../resume.css';
+	import resumeData from '../resume.json';
 
 	let viewedAtElement;
 
@@ -19,12 +20,15 @@
 			});
 		}
 	});
+
+	// Extract data from the JSON
+	const { basics, skills } = resumeData;
 </script>
 
 <svelte:head>
-	<title>Kevin Lin - Resume</title>
-	<meta content="Kevin Lin's professional resume" name="description" />
-	<meta content="Kevin Lin" name="author" />
+	<title>{basics.name} - Resume</title>
+	<meta content="{basics.name}'s professional resume" name="description" />
+	<meta content={basics.name} name="author" />
 	<script
 		defer
 		src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
@@ -55,9 +59,11 @@
 			<strong>external links</strong>
 		</div>
 		<div class="text-right">
-			<div class="d-inline-block mb-2 ms-3 text-right">
-				<a href="https://github.com/kevinlinp" target="_blank">GitHub</a>
-			</div>
+			{#each basics.profiles as profile}
+				<div class="d-inline-block mb-2 ms-3 text-right">
+					<a href={profile.url} target="_blank">{profile.network}</a>
+				</div>
+			{/each}
 		</div>
 	</div>
 </div>
@@ -72,42 +78,29 @@
 
 <div class="container">
 	<div class="text-center">
-		<h1>Kevin Lin</h1>
-		<a href="mailto:kevin.lin.p@gmail.com">kevin.lin.p@gmail.com</a>
+		<h1>{basics.name}</h1>
+		<a href="mailto:{basics.email}">{basics.email}</a>
 	</div>
 
 	<section>
 		<h2>Summary</h2>
-		<p>
-			Staff software engineer, backend-focused full-stack web, 10+ years of Ruby on Rails
-			experience.
-		</p>
+		<p>{basics.summary}</p>
 	</section>
 
 	<section>
 		<h2>Skills</h2>
 		<ul class="list-unstyled loose-list">
-			<li>
-				<strong>Languages</strong>
-				<span class="ms-2">Ruby, JavaScript, TypeScript, HTML, CSS, SQL</span>
-			</li>
-			<li>
-				<strong>Frameworks</strong>
-				<span class="ms-2">Ruby on Rails, React, Vue.js, Apollo GraphQL, MiniTest, Cypress</span>
-			</li>
-			<li>
-				<strong>Tools</strong>
-				<span class="ms-2">Linux, PostgreSQL, Elasticsearch, Sidekiq, Git, Docker, Sentry, Datadog</span>
-			</li>
-			<li>
-				<strong>Methodologies</strong>
-				<span class="ms-2">agile software development, test-driven development, pair programming</span>
-			</li>
+			{#each skills as skill}
+				<li>
+					<strong>{skill.name}</strong>
+					<span class="ms-2">{skill.keywords.join(', ')}</span>
+				</li>
+			{/each}
 		</ul>
 	</section>
 
-	<Experience />
-	<Education />
+	<Experience {resumeData} />
+	<Education {resumeData} />
 	<!-- Uncomment to include Projects section -->
-	<!-- <Projects /> -->
+	<!-- <Projects {resumeData} /> -->
 </div>
