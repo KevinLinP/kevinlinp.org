@@ -1,16 +1,16 @@
 {
-  "name": "parcel-test",
-  "description": "",
-  "scripts": {
-    "start": "parcel src/*.pug",
-    "build": "parcel build src/*.pug"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@parcel/transformer-pug": "^2.13.3",
-    "jstransformer-clean-css": "^2.1.0",
-    "parcel": "^2.13.3"
-  }
+	"name": "parcel-test",
+	"description": "",
+	"scripts": {
+		"start": "parcel src/*.pug",
+		"build": "parcel build src/*.pug"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@parcel/transformer-pug": "^2.13.3",
+		"jstransformer-clean-css": "^2.1.0",
+		"parcel": "^2.13.3"
+	}
 }
