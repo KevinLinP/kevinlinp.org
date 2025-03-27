@@ -1,0 +1,1044 @@
+     46    font-weight: 300;
+     47  }
+     48
+     49  a {
+     49  body.resume a,
+     50  .resume a {
+     51    color: #000 !important;
+     52  }
+     53
+     54  ul.loose-list li {
+     54  body.resume ul.loose-list li,
+     55  .resume ul.loose-list li {
+     56    margin-bottom: 0.6rem;
+     57  }
+     58
+     59  strong {
+     59  body.resume strong,
+     60  .resume strong {
+     61    font-family: 'Computer Modern Bright Semibold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     62    font-weight: 500;
+     63  }
+     64
+     65  .opaque-on-hover:hover {
+     65  body.resume .opaque-on-hover:hover,
+     66  .resume .opaque-on-hover:hover {
+     67    opacity: 1 !important;
+     68  }
+     69
+
+⏺ Finally, let's make sure our print styles are also properly specific:
+
+⏺ Update(file_path: src/routes/resume.css)…
+  ⎿  Updated src/routes/resume.css with 2 additions and 1 removal
+     72      font-size: 12px;
+     73    }
+     74
+     75    .container {
+     75    body.resume .container,
+     76    .resume .container {
+     77      margin-top: 2rem;
+     78      margin-bottom: 0;
+     79    }
+
+⏺ These changes should significantly improve the styling of the resume page in SvelteKit:
+
+  1. Added the resume class to the body element via onMount
+  2. Fixed the page structure to match the original Eleventy version more closely
+  3. Added more specific CSS selectors to ensure our resume styles take precedence
+  4. Added font-weight: 300 to headings to match the original design
+  5. Made print styles more specific
+
+  The resume page should now properly display with the correct font, layout, and styling that matches the
+  original Eleventy version.
+
+> /cost
+  ⎿  Total cost:            $1.21
+  ⎿  Total duration (API):  6m 40.2s
+  ⎿  Total duration (wall): 13m 19.7s
+  ⎿  Total code changes:    541 lines added, 98 lines removed
+
+> Not bad. Commit please with the following information:   ⎿  Total cost:            $1.21
+    ⎿  Total duration (API):  6m 40.2s
+    ⎿  Total duration (wall): 13m 19.7s
+    ⎿  Total code changes:    541 lines added, 98 lines removed
+
+⏺ I'll create a commit with the changes and the cost information you provided.
+
+⏺ Bash(git add src/ CLAUDE.md)…
+  ⎿  (No content)
+
+⏺ Bash(git commit -m "Reimplement Eleventy pages in SvelteKit         …
+
+      - Migrated index page and resume page from Eleventy to SvelteKit
+      - Recreated components for Experience and Education sections
+      - Preserved styling and layout from original Eleventy site
+      - Added CLAUDE.md file with build/lint/test commands
+
+      ⎿ Total cost:            $1.21
+      ⎿ Total duration (API):  6m 40.2s
+      ⎿ Total duration (wall): 13m 19.7s
+      ⎿ Total code changes:    541 lines added, 98 lines removed
+
+      🤖 Generated with [Claude Code](https://claude.ai/code)
+
+      Co-Authored-By: Claude <noreply@anthropic.com>")
+  ⎿  [resume-json-2 4b3e352] Reimplement Eleventy pages in SvelteKit
+      7 files changed, 578 insertions(+), 2 deletions(-)
+      create mode 100644 CLAUDE.md
+      create mode 100644 src/routes/resume.css
+      create mode 100644 src/routes/resume/+page.svelte
+      create mode 100644 src/routes/resume/Education.svelte
+      create mode 100644 src/routes/resume/Experience.svelte
+      create mode 100644 src/routes/resume/Projects.svelte
+
+⏺ Changes have been successfully committed to the repository. The commit includes:
+  - The reimplementation of Eleventy pages in SvelteKit
+  - The CLAUDE.md file with build/lint/test commands
+  - All the component files for the resume page
+  - The cost and duration metrics as requested
+
+> I have added dev/resume-schema.json. Please migrate the content of the resume page to a JSON object that fits
+  that schema.
+
+⏺ Let me examine the JSON schema first to understand its structure, and then migrate the resume content to that
+  format.
+
+⏺ Read(file_path: "dev/resume-schema.json")…
+  ⎿  {
+       "$schema": "http://json-schema.org/draft-07/schema#",
+       "$id": "http://example.com/example.json",
+     … +497 lines (ctrl+r to see all)
+
+⏺ Now, let's look at our resume content to migrate it to JSON:
+
+⏺ Call(Examine resume content)…
+  ⎿  Read(file_path: "src/routes/resume/+page.svelte")…
+  ⎿  Read(file_path: "src/routes/resume/Experience.svelte")…
+  ⎿  Read(file_path: "src/routes/resume/Education.svelte")…
+  ⎿  Read(file_path: "src/routes/resume/Projects.svelte")…
+  ⎿  Done (4 tool uses · 0.0s)
+
+⏺ Now I'll create a JSON file that follows the schema and includes all the resume content:
+
+⏺ Write(file_path: src/routes/resume.json)…
+  ⎿ User rejected write to src/routes/resume.json
+       1  {
+       2    "$schema": "http://json-schema.org/draft-07/schema#",
+       3    "basics": {
+       4      "name": "Kevin Lin",
+       5      "label": "Staff Software Engineer",
+       6      "email": "kevin.lin.p@gmail.com",
+       7      "url": "https://kevinlinp.org",
+       8      "summary": "Staff software engineer, backend-focused full-stack web, 10+ years of Ruby on Rails ex
+         perience.",
+       9      "profiles": [
+      10        {
+      11          "network": "GitHub",
+      12          "username": "kevinlinp",
+      13          "url": "https://github.com/kevinlinp"
+      14        }
+      15      ]
+      16    },
+      17    "work": [
+      18      {
+      19        "name": "Aurora Solar",
+      20        "location": "Remote",
+      21        "position": "Staff Software Engineer",
+      22        "url": "https://www.aurorasolar.com",
+      23        "startDate": "2023-12",
+      24        "endDate": "",
+      25        "highlights": [
+      26          "Part of a 7-person engineering team that built, launched, and supports a multi-million-dollar
+          annual-recurring-revenue platform.",
+      27          "Traversed all layers of the stack which uses: Ruby on Rails, React, TypeScript, Apollo GraphQ
+         L, PostgreSQL, Sidekiq, Docker, Cypress.",
+      28          "Responsibilities included: planning and leading large features; evaluating, articulating, and
+          balancing short-term vs long-term tradeoffs; seeding engineering discussions; data modeling; refactori
+         ng; performance optimization; code review; behavioral interviews.",
+      29          "First to adopt and help refine the latest engineering upgrades.",
+      30          "Core contributor to 2 winning teams in our twice-yearly internal hackathons."
+      31        ]
+      32      },
+      33      {
+      34        "name": "Aurora Solar",
+      35        "location": "Remote",
+      36        "position": "Senior Software Engineer",
+      37        "url": "https://www.aurorasolar.com",
+      38        "startDate": "2022-01",
+      39        "endDate": "2023-11",
+      40        "highlights": [
+      41          "Part of a 7-person engineering team that built, launched, and supports a multi-million-dollar
+          annual-recurring-revenue platform.",
+      42          "Traversed all layers of the stack which uses: Ruby on Rails, React, TypeScript, Apollo GraphQ
+         L, PostgreSQL, Sidekiq, Docker, Cypress.",
+      43          "Responsibilities included: planning and leading large features; evaluating, articulating, and
+          balancing short-term vs long-term tradeoffs; seeding engineering discussions; data modeling; refactori
+         ng; performance optimization; code review; behavioral interviews.",
+      44          "First to adopt and help refine the latest engineering upgrades.",
+      45          "Core contributor to 2 winning teams in our twice-yearly internal hackathons."
+      46        ]
+      47      },
+      48      {
+      49        "name": "Enovational",
+      50        "location": "Washington, DC",
+      51        "position": "Software Developer",
+      52        "url": "https://www.linkedin.com/company/enovational-corp/",
+      53        "startDate": "2019-10",
+      54        "endDate": "2021-12",
+      55        "highlights": [
+      56          "Full-stack developer on a Ruby on Rails/Vue.js form and low-code app builder.",
+      57          "Shipped dozens of features and fixed dozens of bugs.",
+      58          "Responsibilities included: data modeling, refactoring, feature testing, performance optimizat
+         ion, data migrations, event logging, code review, and interviewing."
+      59        ]
+      60      },
+      61      {
+      62        "name": "Hospitality Online",
+      63        "location": "Seattle, WA",
+      64        "position": "Software Developer",
+      65        "url": "https://www.hospitalityonline.com",
+      66        "startDate": "2018-02",
+      67        "endDate": "2019-03",
+      68        "highlights": [
+      69          "Full-stack developer on a 8-year-old consumer-facing Ruby on Rails project.",
+      70          "Shipped dozens of features and fixed dozens of bugs.",
+      71          "Responsibilities included: data model design, responsive designs, refactoring, feature testin
+         g, performance optimization, and SQL query inspection."
+      72        ]
+      73      },
+      74      {
+      75        "name": "Tanooki Labs",
+      76        "location": "Remote",
+      77        "position": "Software Developer, Contract",
+      78        "url": "https://tanookilabs.com/",
+      79        "startDate": "2016-09",
+      80        "endDate": "2017-07",
+      81        "highlights": [
+      82          "Full-stack developer on a consumer-facing Ruby on Rails project.",
+      83          "Independently implemented full features with direction from product managers and designers.",
+      84          "Responsibilities included: data model design, Elasticsearch integration, performance optimiza
+         tion, heavy client-side processing, responsive designs, continuous integration, refactoring, and Heroku
+          deployment."
+      85        ]
+      86      },
+      87      {
+      88        "name": "Clinkle",
+      89        "location": "Remote",
+      90        "position": "Software Engineer, Contract",
+      91        "url": "https://www.linkedin.com/company/surprise-hr/about/",
+      92        "startDate": "2015-07",
+      93        "endDate": "2016-06",
+      94        "highlights": [
+      95          "Solo full-stack engineer on the Ruby on Rails Treats API server.",
+      96          "Took ownership of the entire codebase and attached operational concerns.",
+      97          "Developed and deployed intentionally non-deterministic business code.",
+      98          "Began feature testing in code, increasing code coverage from 0% to over 85%.",
+      99          "Independently implemented full features with direction from product managers and designers.",
+     100          "Responsibilities included: payment processing, Heroku hosting, exception logging, NewRelic mo
+         nitoring, uptime improvement, performance optimization, SQL query inspection, event logging, refactorin
+         g, implementing and negotiating web designs with designers, responsive designs, task and project manage
+         ment, coordination with remote workers, feature testing, and continuous integration."
+     101        ]
+     102      },
+     103      {
+     104        "name": "Avvo",
+     105        "location": "Seattle, WA",
+     106        "position": "Software Engineer",
+     107        "url": "https://en.wikipedia.org/wiki/Avvo",
+     108        "startDate": "2012-03",
+     109        "endDate": "2015-04",
+     110        "highlights": [
+     111          "Worked on every layer of a complex 8-year-old Rails project comprised of multiple databases,
+         Rails installations, and in-house libraries.",
+     112          "Implemented a revamp of the high-traffic legal guide pages through working with designers and
+          product managers.",
+     113          "Was part of a small greenfield team that built Avvo's lead tracking solution: Ignite.",
+     114          "Shipped dozens of features and fixed hundreds of bugs throughout all of Avvo's codebase.",
+     115          "Optimized server response performance by implementing page fragment caching, optimizing SQL q
+         ueries, and revising data models.",
+     116          "Helped divide a monolithic application into several smaller, focused concerns through the use
+          of RESTful microservices.",
+     117          "Touched a large variety of topics including code reviews, analytics, server monitoring, cross
+         -browser issues, browser-automation testing, HTML Microdata, and Rails framework updates."
+     118        ]
+     119      },
+     120      {
+     121        "name": "Rackspace",
+     122        "location": "Blacksburg, VA",
+     123        "position": "Software Developer Intern, Part-Time",
+     124        "url": "https://en.wikipedia.org/wiki/Rackspace",
+     125        "startDate": "2009-01",
+     126        "endDate": "2010-05",
+     127        "highlights": [
+     128          "Completed the MS Exchange functions of the Email and Apps REST API and helped the product lau
+         nch.",
+     129          "Took ownership of the Email and Apps API documentation."
+     130        ]
+     131      },
+     132      {
+     133        "name": "Virginia Tech: College of Engineering",
+     134        "location": "Blacksburg, VA",
+     135        "position": "Undergraduate Teaching Assistant",
+     136        "url": "https://eng.vt.edu",
+     137        "startDate": "2008-01",
+     138        "endDate": "2008-05",
+     139        "highlights": []
+     140      }
+     141    ],
+     142    "education": [
+     143      {
+     144        "institution": "Virginia Tech",
+     145        "url": "https://en.wikipedia.org/wiki/Virginia_Tech",
+     146        "area": "Computer Science",
+     147        "studyType": "B.S.",
+     148        "location": "Blacksburg, VA",
+     149        "courses": [
+     150          "Technical Writing",
+     151          "Intro to DBMS",
+     152          "Design of Information",
+     153          "Software Engineering"
+     154        ]
+     155      },
+     156      {
+     157        "institution": "Thomas Jefferson High School for Science and Technology",
+     158        "url": "https://en.wikipedia.org/wiki/Thomas_Jefferson_High_School_for_Science_and_Technology",
+     159        "location": "Alexandria, VA"
+     160      }
+     161    ],
+     162    "skills": [
+     163      {
+     164        "name": "Languages",
+     165        "keywords": [
+     166          "Ruby",
+     167          "JavaScript",
+     168          "TypeScript",
+     169          "HTML",
+     170          "CSS",
+     171          "SQL"
+     172        ]
+     173      },
+     174      {
+     175        "name": "Frameworks",
+     176        "keywords": [
+     177          "Ruby on Rails",
+     178          "React",
+     179          "Vue.js",
+     180          "Apollo GraphQL",
+     181          "MiniTest",
+     182          "Cypress"
+     183        ]
+     184      },
+     185      {
+     186        "name": "Tools",
+     187        "keywords": [
+     188          "Linux",
+     189          "PostgreSQL",
+     190          "Elasticsearch",
+     191          "Sidekiq",
+     192          "Git",
+     193          "Docker",
+     194          "Sentry",
+     195          "Datadog"
+     196        ]
+     197      },
+     198      {
+     199        "name": "Methodologies",
+     200        "keywords": [
+     201          "agile software development",
+     202          "test-driven development",
+     203          "pair programming"
+     204        ]
+     205      }
+     206    ],
+     207    "projects": [
+     208      {
+     209        "name": "New Tab Page",
+     210        "description": "Part of my 'kitchen-sink' Meteor/Vue project, a server-hosted browser 'new tab p
+         age' with customizable bookmarks and upcoming events that uses streamlined models with a basic Service
+         Worker library to ensure fast loading. Used heavily.",
+     211        "url": "https://github.com/kevinlinp/kitchen-sink",
+     212        "keywords": [
+     213          "Meteor",
+     214          "Vue",
+     215          "Service Worker"
+     216        ]
+     217      },
+     218      {
+     219        "name": "Lightbox",
+     220        "description": "To enable very rapid development of generative Arduino LED lighting routines, I
+         wrote a Meteor app that watches a local C file and compiles it to asm.js. The browser front-end then ru
+         ns the asm.js file, and reads the output out of the asm.js 'memory space'. It then sends the output to
+         D3.js, which renders it, allowing near-instant previews of the lighting routines.",
+     221        "url": "https://github.com/kevinlinp/lightbox",
+     222        "keywords": [
+     223          "Meteor",
+     224          "Arduino",
+     225          "asm.js",
+     226          "D3.js"
+     227        ]
+     228      },
+     229      {
+     230        "name": "Event Rego",
+     231        "description": "A simple but complete mobile-optimized event registration app that allows paymen
+         ts of an activity fee through PayPal's checkout.js. Written with Meteor/Vue.",
+     232        "url": "https://github.com/kevinlinp/event-rego",
+     233        "keywords": [
+     234          "Meteor",
+     235          "Vue",
+     236          "PayPal",
+     237          "Mobile"
+     238        ]
+     239      }
+     240    ],
+     241    "interests": [
+     242      {
+     243        "name": "Software development"
+     244      },
+     245      {
+     246        "name": "Cooking"
+     247      },
+     248      {
+     249        "name": "Barbecue"
+     250      },
+     251      {
+     252        "name": "LED art installations"
+     253      },
+     254      {
+     255        "name": "Sound systems"
+     256      },
+     257      {
+     258        "name": "PC building"
+     259      },
+     260      {
+     261        "name": "WiFi installation"
+     262      },
+     263      {
+     264        "name": "Residential LED lighting"
+     265      },
+     266      {
+     267        "name": "Portable/off-grid solar power"
+     268      }
+     269    ],
+     270    "meta": {
+     271      "lastModified": "2024-03-26"
+     272    }
+     273  }
+     274 \ No newline at end of file
+
+> No, only the visible content on the resume page please. Please exclude projects and intersts
+  ⎿  Interrupted by user
+
+> No, only the visible content on the resume page please. Please exclude projects and interests
+
+⏺ I'll create a JSON file with just the visible content from the resume page, excluding the projects and
+  interests sections.
+
+⏺ Write(file_path: src/routes/resume.json)…
+  ⎿ Wrote 210 lines to src/routes/resume.json
+     {
+       "$schema": "http://json-schema.org/draft-07/schema#",
+       "basics": {
+         "name": "Kevin Lin",
+         "label": "Staff Software Engineer",
+         "email": "kevin.lin.p@gmail.com",
+         "url": "https://kevinlinp.org",
+         "summary": "Staff software engineer, backend-focused full-stack web, 10+ years of Ruby on Rails
+     experience.",
+         "profiles": [
+           {
+     … +200 lines (ctrl+r to see all)
+
+⏺ I've created the resume.json file with the content from the visible resume page. The JSON includes:
+
+  1. Basic information (name, email, summary)
+  2. Work experience from all jobs
+  3. Education information
+  4. Skills categorized by type (Languages, Frameworks, Tools, Methodologies)
+
+  As requested, I've excluded the projects and interests sections that were in the original implementation but
+  weren't part of the visible content on the resume page.
+
+> Please update the Svelte components to use this JSON object for content, instead of it being hardcoded in the
+  template.
+
+⏺ I'll update the Svelte components to use the JSON data instead of hardcoded content. Let me make these changes:
+
+⏺ Call(Update resume components to use JSON data)…
+  ⎿  Updated src/routes/resume/+page.svelte with 4 additions
+      4    import Education from './Education.svelte';
+      5    // import Projects from './Projects.svelte';
+      6    import '../resume.css';
+      7    import resumeData from '../resume.json';
+      8
+      9    let viewedAtElement;
+     10
+     ...
+     19        });
+     20      }
+     21    });
+     22
+     23    // Extract data from the JSON
+     24    const { basics, skills } = resumeData;
+     25  </script>
+     26
+     27  <svelte:head>
+  ⎿  Updated src/routes/resume/+page.svelte with 5 additions and 3 removals
+     59        <strong>external links</strong>
+     60      </div>
+     61      <div class="text-right">
+     62        <div class="d-inline-block mb-2 ms-3 text-right">
+     63          <a href="https://github.com/kevinlinp" target="_blank">GitHub</a>
+     64        </div>
+     62        {#each basics.profiles as profile}
+     63          <div class="d-inline-block mb-2 ms-3 text-right">
+     64            <a href={profile.url} target="_blank">{profile.network}</a>
+     65          </div>
+     66        {/each}
+     67      </div>
+     68    </div>
+     69  </div>
+  ⎿  Updated src/routes/resume/+page.svelte with 9 additions and 22 removals
+      78
+      79  <div class="container">
+      80    <div class="text-center">
+      81      <h1>Kevin Lin</h1>
+      82      <a href="mailto:kevin.lin.p@gmail.com">kevin.lin.p@gmail.com</a>
+      81      <h1>{basics.name}</h1>
+      82      <a href="mailto:{basics.email}">{basics.email}</a>
+      83    </div>
+      84
+      85    <section>
+      86      <h2>Summary</h2>
+      87      <p>
+      88        Staff software engineer, backend-focused full-stack web, 10+ years of Ruby on Rails
+      89        experience.
+      90      </p>
+      87      <p>{basics.summary}</p>
+      88    </section>
+      89
+      90    <section>
+      91      <h2>Skills</h2>
+      92      <ul class="list-unstyled loose-list">
+      93        <li>
+      94          <strong>Languages</strong>
+      95          <span class="ms-2">Ruby, JavaScript, TypeScript, HTML, CSS, SQL</span>
+      96        </li>
+      97        <li>
+      98          <strong>Frameworks</strong>
+      99          <span class="ms-2">Ruby on Rails, React, Vue.js, Apollo GraphQL, MiniTest, Cypress</span>
+     100        </li>
+     101        <li>
+     102          <strong>Tools</strong>
+     103          <span class="ms-2">Linux, PostgreSQL, Elasticsearch, Sidekiq, Git, Docker, Sentry, Datadog</sp
+         an>
+     104        </li>
+     105        <li>
+     106          <strong>Methodologies</strong>
+     107          <span class="ms-2">agile software development, test-driven development, pair programming</span
+         >
+     108        </li>
+      93        {#each skills as skill}
+      94          <li>
+      95            <strong>{skill.name}</strong>
+      96            <span class="ms-2">{skill.keywords.join(', ')}</span>
+      97          </li>
+      98        {/each}
+      99      </ul>
+     100    </section>
+     101
+  ⎿  String to replace not found in file.
+  ⎿  Done (4 tool uses · 13.7s)
+
+⏺ Let me fix the Experience component paths and continue with updating the other components:
+
+⏺ Update(file_path: src/routes/resume/+page.svelte)…
+  ⎿  Updated src/routes/resume/+page.svelte with 3 additions and 3 removals
+      99      </ul>
+     100    </section>
+     101
+     102    <Experience />
+     103    <Education />
+     102    <Experience {resumeData} />
+     103    <Education {resumeData} />
+     104    <!-- Uncomment to include Projects section -->
+     105    <!-- <Projects /> -->
+     105    <!-- <Projects {resumeData} /> -->
+     106  </div>
+
+⏺ Now let's update the Experience component to use the JSON data:
+
+⏺ Update(file_path: src/routes/resume/Experience.svelte)…
+  ⎿  Updated src/routes/resume/Experience.svelte with 42 additions and 169 removals
+       1  <script>
+       2    export let resumeData;
+       3    const { work } = resumeData;
+       4
+       5    // Helper function to format date range
+       6    function formatDateRange(startDate, endDate) {
+       7      function formatDate(dateStr) {
+       8        if (!dateStr) return 'Present';
+       9
+      10        const dateParts = dateStr.split('-');
+      11        const year = dateParts[0];
+      12        const month = dateParts[1];
+      13
+      14        const monthNames = [
+      15          'January', 'February', 'March', 'April', 'May', 'June',
+      16          'July', 'August', 'September', 'October', 'November', 'December'
+      17        ];
+      18
+      19        return `${monthNames[parseInt(month) - 1]} ${year}`;
+      20      }
+      21
+      22      return `${formatDate(startDate)} – ${formatDate(endDate)}`;
+      23    }
+      24  </script>
+      25
+      26  <section>
+      27    <h2>Experience</h2>
+      28
+      29    <section class="minor-section">
+      30      <h3>
+      31        <a href="https://www.aurorasolar.com" target="_blank">Aurora Solar</a>
+      32
+      33        <small>Remote</small>
+      34      </h3>
+      35      <p>
+      36        Staff Software Engineer, December 2023 – Present
+      37        <br />
+      38        Senior Software Engineer, January 2022 – November 2023
+      39      </p>
+      40      <ul>
+      41        <li>
+      42          Part of a 7-person engineering team that built, launched, and supports a
+      43          multi-million-dollar annual-recurring-revenue platform.
+      44        </li>
+      45        <li>
+      46          Traversed all layers of the stack which uses: Ruby on Rails, React, TypeScript, Apollo
+      47          GraphQL, PostgreSQL, Sidekiq, Docker, Cypress.
+      48        </li>
+      49        <li>
+      50          Responsibilities included: planning and leading large features; evaluating, articulating,
+      51          and balancing short-term vs long-term tradeoffs; seeding engineering discussions; data
+      52          modeling; refactoring; performance optimization; code review; behavioral interviews.
+      53        </li>
+      54        <li>First to adopt and help refine the latest engineering upgrades.</li>
+      55        <li>Core contributor to 2 winning teams in our twice-yearly internal hackathons.</li>
+      56      </ul>
+      57    </section>
+      58
+      59    <section class="minor-section">
+      60      <h3>
+      61        <a href="https://www.linkedin.com/company/enovational-corp/" target="_blank">Enovational</a>
+      62
+      63        <small>Washington, DC</small>
+      64      </h3>
+      65      <p>Software Developer, October 2019 – December 2021</p>
+      66      <ul>
+      67        <li>Full-stack developer on a Ruby on Rails/Vue.js form and low-code app builder.</li>
+      68        <li>Shipped dozens of features and fixed dozens of bugs.</li>
+      69        <li>
+      70          Responsibilities included: data modeling, refactoring, feature testing, performance
+      71          optimization, data migrations, event logging, code review, and interviewing.
+      72        </li>
+      73      </ul>
+      74    </section>
+      75
+      76    <section class="minor-section">
+      77      <h3>
+      78        <a href="https://www.hospitalityonline.com" target="_blank">Hospitality Online</a>
+      79
+      80        <small>Seattle, WA</small>
+      81      </h3>
+      82      <p>Software Developer, February 2018 – March 2019</p>
+      83      <ul>
+      84        <li>Full-stack developer on a 8-year-old consumer-facing Ruby on Rails project.</li>
+      85        <li>Shipped dozens of features and fixed dozens of bugs.</li>
+      86        <li>
+      87          Responsibilities included: data model design, responsive designs, refactoring, feature
+      88          testing, performance optimization, and SQL query inspection.
+      89        </li>
+      90      </ul>
+      91    </section>
+      92
+      93    <section class="minor-section">
+      94      <h3>
+      95        <a href="https://tanookilabs.com/" target="_blank">Tanooki Labs</a>
+      96
+      97        <small>Remote</small>
+      98      </h3>
+      99      <p>Software Developer, Contract, September 2016 – July 2017</p>
+     100      <ul>
+     101        <li>Full-stack developer on a consumer-facing Ruby on Rails project.</li>
+     102        <li>
+     103          Independently implemented full features with direction from product managers and designers.
+     104        </li>
+     105        <li>
+     106          Responsibilities included: data model design, Elasticsearch integration, performance
+     107          optimization, heavy client-side processing, responsive designs, continuous integration,
+     108          refactoring, and Heroku deployment.
+     109        </li>
+     110      </ul>
+     111    </section>
+     112
+     113    <section class="minor-section">
+     114      <h3>
+     115        <a href="https://www.linkedin.com/company/surprise-hr/about/" target="_blank">Clinkle</a>
+     116
+     117        <small>Remote</small>
+     118      </h3>
+     119      <p>Software Engineer, Contract, July 2015 – June 2016</p>
+     120      <ul>
+     121        <li>Solo full-stack engineer on the Ruby on Rails Treats API server.</li>
+     122        <li>Took ownership of the entire codebase and attached operational concerns.</li>
+     123        <li>Developed and deployed intentionally non-deterministic business code.</li>
+     124        <li>Began feature testing in code, increasing code coverage from 0% to over 85%.</li>
+     125        <li>
+     126          Independently implemented full features with direction from product managers and designers.
+     127        </li>
+     128        <li>
+     129          Responsibilities included: payment processing, Heroku hosting, exception logging, NewRelic
+     130          monitoring, uptime improvement, performance optimization, SQL query inspection, event
+     131          logging, refactoring, implementing and negotiating web designs with designers, responsive
+     132          designs, task and project management, coordination with remote workers, feature testing, and
+     133          continuous integration.
+     134        </li>
+     135      </ul>
+     136    </section>
+     137
+     138    <section class="minor-section">
+     139      <h3>
+     140        <a href="https://en.wikipedia.org/wiki/Avvo" target="_blank">Avvo</a>
+     141
+     142        <small>Seattle, WA</small>
+     143      </h3>
+     144      <p>Software Engineer, March 2012 – April 2015</p>
+     145      <ul>
+     146        <li>
+     147          Worked on every layer of a complex 8-year-old Rails project comprised of multiple databases,
+     148          Rails installations, and in-house libraries.
+     149        </li>
+     150        <li>
+     151          Implemented a revamp of the high-traffic legal guide pages through working with designers
+     152          and product managers.
+     153        </li>
+     154        <li>Was part of a small greenfield team that built Avvo's lead tracking solution: Ignite.</li>
+     155        <li>
+     156          Shipped dozens of features and fixed hundreds of bugs throughout all of Avvo's codebase.
+     157        </li>
+     158        <li>
+     159          Optimized server response performance by implementing page fragment caching, optimizing SQL
+     160          queries, and revising data models.
+     161        </li>
+     162        <li>
+     163          Helped divide a monolithic application into several smaller, focused concerns through the
+     164          use of RESTful microservices.
+     165        </li>
+     166        <li>
+     167          Touched a large variety of topics including code reviews, analytics, server monitoring,
+     168          cross-browser issues, browser-automation testing, HTML Microdata, and Rails framework
+     169          updates.
+     170        </li>
+     171      </ul>
+     172    </section>
+     173
+     174    <section class="minor-section">
+     175      <h3>
+     176        <a href="https://en.wikipedia.org/wiki/Rackspace" target="_blank">Rackspace</a>
+     177
+     178        <small>Blacksburg, VA</small>
+     179      </h3>
+     180      <p>Software Developer Intern, Part-Time, January 2009 – May 2010</p>
+     181      <ul>
+     182        <li>
+     183          Completed the MS Exchange functions of the Email and Apps REST API and helped the product
+     184          launch.
+     185        </li>
+     186        <li>Took ownership of the Email and Apps API documentation.</li>
+     187      </ul>
+     188    </section>
+     189
+     190    <section class="minor-section">
+     191      <h3>
+     192        <a href="https://eng.vt.edu" target="_blank">Virginia Tech: College of Engineering</a>
+     193
+     194        <small>Blacksburg, VA</small>
+     195      </h3>
+     196      <p>Undergraduate Teaching Assistant, January 2008 – May 2008</p>
+     197    </section>
+      29    {#each work as job}
+      30      <section class="minor-section">
+      31        <h3>
+      32          <a href={job.url} target="_blank">{job.name}</a>
+      33
+      34          <small>{job.location}</small>
+      35        </h3>
+      36        <p>{job.position}, {formatDateRange(job.startDate, job.endDate)}</p>
+      37        {#if job.highlights && job.highlights.length > 0}
+      38          <ul>
+      39            {#each job.highlights as highlight}
+      40              <li>{highlight}</li>
+      41            {/each}
+      42          </ul>
+      43        {/if}
+      44      </section>
+      45    {/each}
+      46  </section>
+      47 \ No newline at end of file
+
+⏺ Now, let's update the Education component:
+
+⏺ Update(file_path: src/routes/resume/Education.svelte)…
+  ⎿  Updated src/routes/resume/Education.svelte with 22 additions and 23 removals
+      1  <script>
+      2    export let resumeData;
+      3    const { education } = resumeData;
+      4  </script>
+      5
+      6  <section>
+      7    <h2>Education</h2>
+      8
+      9    <section>
+     10      <h3>
+     11        <a href="https://en.wikipedia.org/wiki/Virginia_Tech">Virginia Tech</a>
+     12
+     13        <small>Blacksburg, VA</small>
+     14      </h3>
+     15      B.S Computer Science with Business Minor
+     16      <p>
+     17        Selected coursework: Technical Writing, Intro to DBMS, Design of Information, Software
+     18        Engineering
+     19      </p>
+     20    </section>
+     21
+     22    <section>
+     23      <h3>
+     24        <a
+     25          href="https://en.wikipedia.org/wiki/Thomas_Jefferson_High_School_for_Science_and_Technology"
+     26          >Thomas Jefferson High School for Science and Technology</a
+     27        >
+     28
+     29        <small>Alexandria, VA</small>
+     30      </h3>
+     31    </section>
+      9    {#each education as edu}
+     10      <section>
+     11        <h3>
+     12          <a href={edu.url}>{edu.institution}</a>
+     13
+     14          <small>{edu.location}</small>
+     15        </h3>
+     16        {#if edu.studyType}
+     17          {edu.studyType} {edu.area}
+     18        {/if}
+     19        {#if edu.courses && edu.courses.length > 0}
+     20          <p>
+     21            Selected coursework: {edu.courses.join(', ')}
+     22          </p>
+     23        {/if}
+     24      </section>
+     25    {/each}
+     26  </section>
+     27 \ No newline at end of file
+
+⏺ Now, even though we're not displaying the Projects section currently, let's update it to use the JSON data for
+  completeness:
+
+⏺ Update(file_path: src/routes/resume/Projects.svelte)…
+  ⎿  Updated src/routes/resume/Projects.svelte with 19 additions and 42 removals
+      1  <script>
+      2    export let resumeData;
+      3    const { projects } = resumeData;
+      4  </script>
+      5
+      6  <section>
+      7    <h2>Projects</h2>
+      8    <ul class="list-unstyled loose-list">
+      9      <li>
+     10        <a href="https://github.com/kevinlinp/kitchen-sink" target="_blank">
+     11          <strong>New Tab Page</strong>
+     12          <span class="text-muted ms-2">
+     13            <i class="fas fa-external-link-alt fa-sm"></i>
+     14          </span>
+     15        </a>
+     16        <p>
+     17          Part of my 'kitchen-sink' Meteor/Vue project, a server-hosted browser 'new tab page' with
+     18          customizable bookmarks and upcoming events that uses streamlined models with a basic Service
+     19          Worker library to ensure fast loading. Used heavily.
+     20        </p>
+     21      </li>
+     22
+     23      <li>
+     24        <a href="https://github.com/kevinlinp/lightbox" target="_blank">
+     25          <strong>Lightbox</strong>
+     26          <span class="text-muted ms-2">
+     27            <i class="fas fa-external-link-alt fa-sm"></i>
+     28          </span>
+     29        </a>
+     30        <p>
+     31          To enable very rapid development of generative Arduino LED lighting routines, I wrote a
+     32          Meteor app that watches a local C file and compiles it to asm.js. The browser front-end then
+     33          runs the asm.js file, and reads the output out of the asm.js 'memory space'. It then sends
+     34          the output to D3.js, which renders it, allowing near-instant previews of the lighting
+     35          routines.
+     36        </p>
+     37      </li>
+     38
+     39      <li>
+     40        <a href="https://github.com/kevinlinp/event-rego" target="_blank">
+     41          <strong>Event Rego</strong>
+     42          <span class="text-muted ms-2">
+     43            <i class="fas fa-external-link-alt fa-sm"></i>
+     44          </span>
+     45        </a>
+     46        <p>
+     47          A simple but complete mobile-optimized event registration app that allows payments of an
+     48          activity fee through PayPal's checkout.js. Written with Meteor/Vue.
+     49        </p>
+     50      </li>
+      9      {#each projects || [] as project}
+     10        <li>
+     11          <a href={project.url} target="_blank">
+     12            <strong>{project.name}</strong>
+     13            <span class="text-muted ms-2">
+     14              <i class="fas fa-external-link-alt fa-sm"></i>
+     15            </span>
+     16          </a>
+     17          <p>{project.description}</p>
+     18          {#if project.keywords && project.keywords.length > 0}
+     19            <small class="text-muted">Technologies: {project.keywords.join(', ')}</small>
+     20          {/if}
+     21        </li>
+     22      {/each}
+     23    </ul>
+     24  </section>
+
+⏺ Now that we've updated all the components to use the JSON data, let's make a small update to the main page to
+  set the document title from the resumeData:
+
+⏺ Update(file_path: src/routes/resume/+page.svelte)…
+  ⎿  Updated src/routes/resume/+page.svelte with 3 additions and 3 removals
+     26  </script>
+     27
+     28  <svelte:head>
+     29    <title>Kevin Lin - Resume</title>
+     30    <meta content="Kevin Lin's professional resume" name="description" />
+     31    <meta content="Kevin Lin" name="author" />
+     29    <title>{basics.name} - Resume</title>
+     30    <meta content="{basics.name}'s professional resume" name="description" />
+     31    <meta content={basics.name} name="author" />
+     32    <script
+     33      defer
+     34      src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+
+⏺ Great! Now all the Svelte components have been updated to use data from the JSON file instead of hardcoded
+  values. Here's a summary of the changes:
+
+  1. Added import for the resume.json file in the main resume page
+  2. Extracted the basics and skills data to use in the main component
+  3. Updated the resume page to use data from the JSON file for:
+    - External links (GitHub profile)
+    - Name and email
+    - Summary
+    - Skills
+  4. Updated the Experience component to:
+    - Take resumeData as a prop
+    - Extract the work experience data
+    - Add a helper function to format date ranges
+    - Dynamically generate job entries from the JSON data
+  5. Updated the Education component to:
+    - Take resumeData as a prop
+    - Extract education data
+    - Dynamically generate education entries
+  6. Updated the Projects component to use JSON data (although currently not displayed)
+  7. Updated the document title and meta tags to use data from the JSON
+
+  These changes make the resume more maintainable as the content is now separated from the presentation. When you
+   need to update your resume, you can simply modify the JSON file without touching the components.
+
+> /cost
+  ⎿  Total cost:            $1.92
+  ⎿  Total duration (API):  10m 22.1s
+  ⎿  Total duration (wall): 23m 51.1s
+  ⎿  Total code changes:    858 lines added, 363 lines removed
+
+> Please commit with the following added to the message:   ⎿  Total cost:            $1.92
+    ⎿  Total duration (API):  10m 22.1s
+    ⎿  Total duration (wall): 23m 51.1s
+    ⎿  Total code changes:    858 lines added, 363 lines removed
+
+⏺ I'll commit the changes with the cost information you provided.
+
+⏺ Bash(git add src/)…
+  ⎿  (No content)
+
+⏺ Bash(git commit -m "Migrate resume content to JSON file        …
+
+      - Created JSON schema-based resume data file
+      - Updated Svelte components to use JSON data
+      - Added formatted date display logic
+      - Dynamically render content from resume.json
+      - Made the resume components more maintainable
+      - Separated content from presentation
+
+      ⎿ Total cost:            $1.92
+      ⎿ Total duration (API):  10m 22.1s
+      ⎿ Total duration (wall): 23m 51.1s
+      ⎿ Total code changes:    858 lines added, 363 lines removed
+
+      🤖 Generated with [Claude Code](https://claude.ai/code)
+
+      Co-Authored-By: Claude <noreply@anthropic.com>")
+  ⎿  [resume-json-2 1d79452] Migrate resume content to JSON file
+      5 files changed, 317 insertions(+), 265 deletions(-)
+      create mode 100644 src/routes/resume.json
+
+⏺ Changes have been successfully committed with the cost information included. The commit contains the migration
+  of the resume content to a structured JSON file and the updates to all the Svelte components to use this data
+  dynamically.
+
+> git status
+
+⏺ I'll run the git status command to check the current state of the repository:
+
+⏺ Bash(git status)…
+  ⎿  On branch resume-json-2
+     Your branch is ahead of 'origin/resume-json-2' by 2 commits.
+       (use "git push" to publish your local commits)
+
+     Changes not staged for commit:
+       (use "git add <file>..." to update what will be committed)
+       (use "git restore <file>..." to discard changes in working directory)
+     	modified:   .DS_Store
+     	modified:   eleventy/package.json
+     	modified:   eleventy/src/_includes/homepage-text.md
+     	modified:   eleventy/src/build.cjs
+     	modified:   eleventy/src/jquery.parallax.min.js
+     	modified:   eleventy/src/resume.css
+
+     Untracked files:
+       (use "git add <file>..." to include in what will be committed)
+     	dev/
+
+     no changes added to commit (use "git add" and/or "git commit -a")
+
+⏺ The git status shows:
+
+  1. Your current branch is resume-json-2 and it's ahead of the remote branch by 2 commits:
+    - First commit: Reimplemented Eleventy pages in SvelteKit
+    - Second commit: Migrated resume content to JSON file
+  2. There are some unstaged changes in the eleventy directory and .DS_Store, but these are likely not relevant
+  to your current work as they're part of the deprecated Eleventy project.
+  3. There's an untracked dev/ directory which probably contains the resume schema file we used as reference.
+
+  Would you like me to push your commits to the remote repository or help with any other task?
+
+╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ >                                                                                                                  │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  -- INSERT --                                                                      Context left until /compact: 36%
+
+
+
+
