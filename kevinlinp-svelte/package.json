@@ -1,0 +1,26 @@
+{
+  "name": "kevinlinp-svelte",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "Kevin Lin",
+  "license": "ISC",
+  "description": "Kevin Lin's personal website built with SvelteKit and Svelte 5",
+  "devDependencies": {
+    "@sveltejs/adapter-cloudflare": "^6.0.1",
+    "@sveltejs/kit": "^2.20.2",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "eslint": "^9.23.0",
+    "eslint-plugin-svelte": "^3.3.3",
+    "prettier": "^3.5.3",
+    "prettier-plugin-svelte": "^3.3.3",
+    "svelte": "^5.25.3",
+    "vite": "^6.2.3"
+  }
+}
